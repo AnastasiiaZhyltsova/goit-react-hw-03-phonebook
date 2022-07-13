@@ -12,6 +12,7 @@ state = {
   filter:'',
   }
   // компонент замаунтился(первый раз, 1 раз) при обновлении стр 
+//  можем засетить начальные данные 
   componentDidMount(){
     const contacts = localStorage.getItem('contacts');
     const parsedContacts = JSON.parse(contacts);
@@ -23,6 +24,7 @@ state = {
     }
 }  
 // метод жизненного цикла Вызывается сразу после обновления компонента в DOM
+  // после обновления можем что-то сделать 
   componentDidUpdate(prevState) {
     if (this.state.contacts !== prevState.contacts) {
       console.log('Обновилось')
